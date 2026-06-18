@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>ZeroClick - AI Powered Automation</title>
+    <meta
+      name="description"
+      content="Automate your emails and calendar. Save time. Stay focused."
+    />
+
+    <link rel="stylesheet" href="./fluid-overlay-styles.css" />
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <div class="overlay">
+
+      <div class="entry-content">
+        <div class="flame-icon" aria-hidden="true">
+          <video autoplay muted loop playsinline class="flame-video">
+            <source src="./fire.webm" type="video/webm" />
+          </video>
+        </div>
+
+        <h1 class="brand">Zero<span>Click</span></h1>
+        <p class="tagline">AI Powered Automation</p>
+        <p class="subtext">
+          Automate your emails and calendar.<br />Save time. Stay focused.
+        </p>
+        <button
+          class="enter-btn"
+          type="button"
+          onclick="
+            window.location.href = 'https://zeroclick.dinesh-swami.online/'
+          "
+        >
+          <span>Enter</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+
+
+    <script src="./webgl-fluid.js"></script>
+
+
+
+<audio id="moveSound" preload="auto">
+  <source src="./light.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const sound = document.getElementById("moveSound");
+
+let lastPlay = 0;
+
+document.addEventListener("mousemove", () => {
+
+  const now = Date.now();
+
+  if (now - lastPlay > 500) {
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+    lastPlay = now;
+  }
+
+});
+</script>
+  </body>
+</html>
