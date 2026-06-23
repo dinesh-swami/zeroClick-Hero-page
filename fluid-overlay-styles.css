@@ -6,7 +6,7 @@
   padding: 0;
   user-select: none; /* prevents all text from being selected */
 }
-
+/* prevents all text from being selected */
 html,
 body {
   margin: 0;
